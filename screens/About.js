@@ -1,10 +1,15 @@
-import { StyleSheet, Text, View } from "react-native";
-import React from "react";
+import { Button, StyleSheet, Text, TouchableOpacity, View } from "react-native";
 
-const About = () => {
+const About = ({ navigation }) => {
   return (
-    <View>
-      <Text>About Screen</Text>
+    <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
+      <Text style={{ fontSize: 30 }}>About Screen</Text>
+      <TouchableOpacity>
+        <Button
+          title="Go to Home"
+          onPress={() => navigation.navigate("Home")}
+        ></Button>
+      </TouchableOpacity>
     </View>
   );
 };
